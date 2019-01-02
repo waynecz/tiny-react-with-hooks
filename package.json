@@ -1,0 +1,22 @@
+{
+  "name": "@waynecz/tiny-react",
+  "version": "0.0.1",
+  "description": "Minimum implementation of React with hooks",
+  "main": "dist/index",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waynecz/tiny-react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "waynecz <451578533@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waynecz/tiny-react/issues"
+  },
+  "homepage": "https://github.com/waynecz/tiny-react#readme"
+}
