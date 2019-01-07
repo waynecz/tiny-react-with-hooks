@@ -81,7 +81,7 @@ export function patch(
     // Function component patch
     const instance = dom.__react__
     if (instance && instance.renderFunc === vnode.type) {
-      const shouldComponentUpdate = !isEqual(instance.props, vnode.children)
+      const shouldComponentUpdate = !isEqual(instance.props, vnode.children, ['children'])
 
       if (shouldComponentUpdate) {
         instance.props = Object.assign({}, instance.props, vnode.props)

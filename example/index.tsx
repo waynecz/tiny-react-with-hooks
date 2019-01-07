@@ -1,6 +1,5 @@
-import Freact, { useState } from 'src'
-import FreactDOM from 'src/vnode'
-;(window as any).react = Freact
+import React, { useState } from '../src'
+import ReactDOM from '../src/vnode'
 
 function plus(curValue, setValue) {
   setValue(!curValue)
@@ -34,7 +33,7 @@ function Kid() {
   return <div onClick={handleClick} className="kid button">{value}</div>
 }
 
-FreactDOM.render(
+ReactDOM.render(
   <App data={1}>
     <Kid />
   </App>,
