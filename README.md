@@ -1,3 +1,10 @@
 # Tiny React
 
-Entirely empty here
+### Features
++ Basic JSX and Renderer with VirtualDOM(diff & patch)
++ Function Component
++ Hooks: `useState` 
+
+
+### TODO
+- [ ] `useEffect` / `useCallback` ...
