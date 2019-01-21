@@ -95,7 +95,7 @@ export function patch(
       ]);
 
       if (shouldComponentUpdate) {
-        instance.props = Object.assign({}, instance.props, vnode.props);
+        instance.props = Object.assign({}, instance.props, vnode.props, { children: vnode.children });
         setCurrentDispatcher(instance);
         const newVnode = instance._render(instance.renderFunc);
 
