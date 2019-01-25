@@ -1,6 +1,6 @@
 # Tiny React
 
-A concise version of React **just good enough** for building uncomplicated ui, especially suitable for SDK care about the size deadly
+A concise version of React **just good enough** for building uncomplicated ui, deadly suitable for SDK care about the size
 
 <br>
 
@@ -17,9 +17,23 @@ A concise version of React **just good enough** for building uncomplicated ui, e
 
 <br>
 
+### Install and Usage
+```
+npm i @waynecz/react -S
+```
+
++ [Simple Demo]()
++ [Playgrounds]()
+
+<br>
+
 ### My path to implement this React with Hooks
-1. [Who handled those JSX tags & What on earth JSX complied to be](void)
-2. []()
+1. [From JSX to virtual DOM](void)
+2. [Different between Component and Functional component]()
+3. [Render VDOM to Elements]()
+4. [How Functional component useState]()
+5. [Diff and Patch VDOM]()
+4. ...
 
 <br>
 

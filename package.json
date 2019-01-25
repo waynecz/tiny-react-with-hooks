@@ -1,5 +1,5 @@
 {
-  "name": "@waynecz/tiny-react",
+  "name": "@waynecz/react",
   "version": "0.0.1",
   "description": "Minimum implementation of React with hooks",
   "main": "dist/index",
