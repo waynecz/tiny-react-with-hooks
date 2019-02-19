@@ -1,36 +1,51 @@
-# Tiny React
+<img src="./example/logo.png" />
 
-A concise version of React **just good enough** for building uncomplicated UI, deadly suitable for SDK care about the size
+<br/>
+<br/>
+<br/>
+<br/>
 
-<br>
+<p align="center">
+  <sup>A concise version of React <strong>just good enough</strong> for building uncomplicated UI <br/> deadly suitable for SDK which cares about the size</sup>
 
-### Features
+</p>
+
+<br/>
+<br/>
+
+<div align="center">
+<pre>npm i <a href="https://www.npmjs.com/package/@waynecz/react">@waynecz/react</a></pre>
+</div>
+
+<br/>
+<br/>
+
+<h3 ><sup>Features</sup></h3>
 
 - Basic JSX and Renderer with VirtualDOM(diff & patch)
 - Functional Component
 - Hooks like `useState` / `useEffect`
 
-<br>
+<br/>
+<br/>
 
-### Todo
+<h3 ><sup>Todo</sup></h3>
 
 - [ ] `useCallback` / `useMemo` ...
 - [ ] make state setter asynchronous
 
-<br>
+<br/>
+<br/>
 
-### Install and Usage
+<h3 ><sup>Demos</sup></h3>
 
-```
-npm i @waynecz/react -S
-```
+- [Simple usage]()
+- [Advance demo]()
 
-- [Simple Demo]()
-- [Playgrounds]()
+<br/>
+<br/>
 
-<br>
-
-### Reference
+<h3><sup>References</sup></h3>
 
 - [《Gooact: React in 160 lines of JavaScript》](https://medium.com/@sweetpalma/gooact-react-in-160-lines-of-javascript-44e0742ad60f) by [Paul Marlow](https://github.com/sweetpalma)
 - [《React as a UI Runtime》](https://overreacted.io/react-as-a-ui-runtime/) by [Dan Abramov](https://overreacted.io)
