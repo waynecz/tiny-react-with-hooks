@@ -1,18 +1,18 @@
 {
   "name": "@waynecz/react",
-  "version": "0.0.1",
-  "description": "Minimum implementation of React with hooks",
+  "version": "0.1.0",
+  "description": "Fundamental implementation of React with hooks & VDOM",
   "main": "dist/index",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "npm run test",
+    "dev": "npx parcel ./example/index.html",
     "build": "npx tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waynecz/tiny-react.git"
+    "url": "git+https://github.com/waynecz/tiny-react-with-hooks.git"
   },
   "keywords": [
     "react"
@@ -20,9 +20,9 @@
   "author": "waynecz <451578533@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/waynecz/tiny-react/issues"
+    "url": "https://github.com/waynecz/tiny-react-with-hooks/issues"
   },
-  "homepage": "https://github.com/waynecz/tiny-react#readme",
+  "homepage": "https://github.com/waynecz/tiny-react-with-hooks#readme",
   "dependencies": {
     "tslint": "^5.12.0",
     "typescript": "^3.2.2"

@@ -1,41 +1,38 @@
-import React, { useState } from '../src'
+import React, { useState, useEffect } from '../src'
 import ReactDOM from '../src/vnode'
 
-function plus(curValue, setValue) {
-  setValue(!curValue)
-}
-
-function App({ data, children }: any) {
-  const [value, setValue] = useState(true)
-
+function App() {
   return (
-    <section id={data} className="clazz1">
-      <h1>{value.toString()}</h1>
-      {value ? <strong>yes</strong> : ''}
-      <div className="wrap">
-        <div className="button" onClick={_ => plus(value, setValue)}>
-          toggle
-        </div>
-      </div>
-
-      {children}
-    </section>
+    <main className="clazz1">
+      <Number />
+      <Number />
+    </main>
   )
 }
 
-function Kid() {
-  const [value, setValue] = useState(~~(Math.random() * 100))
-  
-  function handleClick() {
-    setValue(~~(Math.random() * 100))
-  }
+function Number() {
+  const [number, setNumber] = useState(~~(Math.random() * 100))
+  const [dep, setDep] = useState('initial dep')
 
-  return <div onClick={handleClick} className="kid button">{value}</div>
+  useEffect(() => {
+    console.log('number effect:', number)
+  }, [dep])
+
+  useEffect(() => {
+    console.log('dependencies effect:', dep)
+  }, [number])
+
+  return (
+    <div className="number">
+      <section >
+        <button onClick={() => setNumber(number - 1)}>-</button>
+        <input type="number" value={number} onInput={(e) => setNumber(e.target.value)} />
+        <button onClick={() => setNumber(number + 1)}>+</button>
+      </section>
+      <p>{dep}</p>
+      <button onClick={() => setDep(Math.random().toString(16))}>change dependencies</button>
+    </div>
+  )
 }
 
-ReactDOM.render(
-  <App data={1}>
-    <Kid />
-  </App>,
-  document.getElementById('friday')
-)
+ReactDOM.render(<App />, document.getElementById('root'))

@@ -1,4 +1,4 @@
-<img src="./example/logo.png" />
+<img src="./logo.png" />
 
 <br/>
 <br/>
@@ -32,7 +32,6 @@
 <h3 ><sup>Todo</sup></h3>
 
 - [ ] `useCallback` / `useMemo` ...
-- [ ] make state setter asynchronous
 
 <br/>
 <br/>

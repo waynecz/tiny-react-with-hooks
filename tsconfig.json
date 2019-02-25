@@ -9,7 +9,7 @@
     "noUnusedParameters": true,
     "target": "esnext",
     "jsx": "react",
-    "jsxFactory": "react.createElement",
+    "jsxFactory": "React.createElement",
     "lib": ["dom", "es2017"],
     "sourceMap": false,
     "outDir": "./dist",

@@ -39,9 +39,10 @@ export function flatten<T>(array: T[]): T[] {
   }, [])
 }
 
-
 export function isArrayEqual(arr: any[], other: any[]): boolean {
   if (arr.length !== other.length) return false
+
+  if (arr.length === 0 && other.length === 0) return true
 
   const allEqual = arr.every((value, index) => {
     return _compareTwoValueToSeeIfTheyAreEquall(value, other[index])
