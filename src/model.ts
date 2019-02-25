@@ -13,7 +13,7 @@ export type MemoCursor = {
 }
 
 export type Effect = {
-  callback: () => any
+  callback: (elm: HTMLElement) => any
   cleanup: Function | null
   lastTimeDeps: any[]
 }

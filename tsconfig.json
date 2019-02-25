@@ -7,7 +7,7 @@
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "target": "esnext",
+    "target": "es6",
     "jsx": "react",
     "jsxFactory": "React.createElement",
     "lib": ["dom", "es2017"],

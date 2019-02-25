@@ -56,7 +56,7 @@ export class Component {
       const effectHook = __ReactMemoizedEffects[cursor]
       if (!isFunction(effectHook.callback)) return
 
-      const cleanup = effectHook.callback()
+      const cleanup = effectHook.callback(this.base)
       if (cleanup) {
         effectHook.cleanup = cleanup
       }
