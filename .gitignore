@@ -1,7 +1,7 @@
 node_modules
 .rpt2_cache
 .idea
-.cache
+.cache/
 .DS_Store
 dist/
 package-lock.json

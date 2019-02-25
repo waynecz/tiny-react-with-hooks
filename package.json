@@ -1,13 +1,15 @@
 {
   "name": "@waynecz/react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fundamental implementation of React with hooks & VDOM",
   "main": "dist/index",
   "files": [
     "dist"
   ],
   "scripts": {
+    "lint": "npx tslint src/**/*",
     "dev": "npx parcel ./example/index.html",
+    "prebuild": "npm run lint && rimraf dist",
     "build": "npx tsc"
   },
   "repository": {
@@ -23,8 +25,9 @@
     "url": "https://github.com/waynecz/tiny-react-with-hooks/issues"
   },
   "homepage": "https://github.com/waynecz/tiny-react-with-hooks#readme",
-  "dependencies": {
+  "devDependencies": {
     "tslint": "^5.12.0",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "rimraf": "^2.6.3"
   }
 }

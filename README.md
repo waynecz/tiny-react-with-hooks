@@ -1,4 +1,4 @@
-<img src="./logo.png" />
+<img src="./assets/logo.png" />
 
 <br/>
 <br/>
@@ -27,19 +27,19 @@
 - Hooks like `useState` / `useEffect`
 
 <br/>
-<br/>
 
 <h3 ><sup>Todo</sup></h3>
 
 - [ ] `useCallback` / `useMemo` ...
 
 <br/>
-<br/>
 
 <h3 ><sup>Demos</sup></h3>
 
 - [Simple usage](https://codesandbox.io/s/2pkyw29ymp)
 - [Advanced: A Feedback UI](https://codesandbox.io/s/n7yvzjrkoj)
+
+![](./assets/simple-demo.gif)
 
 <br/>
 <br/>
