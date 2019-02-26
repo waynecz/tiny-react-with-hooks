@@ -7,6 +7,7 @@ export interface ReactElement {
   children: ReactElement[]
   key?: string | number
 }
+
 export type MemoCursor = {
   value: number
   __inited: boolean

@@ -224,32 +224,32 @@ function patchAttributes(dom: ReactRealDomNode, { props: newProps }) {
  * @param attr attribute name
  * @param value attribute value
  */
-function setAttribute(elm: ReactRealDomNode, attr: string, value: any) {
+function setAttribute(dom: ReactRealDomNode, attr: string, value: any) {
   if (isFunction(value) && isEventBinding(attr)) {
     // event binding
     const event = attr.slice(2).toLocaleLowerCase()
-    elm.addEventListener(event, value)
-    if (!elm.__listeners__) {
-      elm.__listeners__ = new Map()
+    dom.addEventListener(event, value)
+    if (!dom.__listeners__) {
+      dom.__listeners__ = new Map()
     }
 
-    elm.__listeners__.set(event, value)
+    dom.__listeners__.set(event, value)
   } else if (['checked', 'value', 'className'].includes(attr)) {
     // normal attributes
-    elm[attr] = value
+    dom[attr] = value
   } else if (attr === 'style' && isObject(value)) {
     // style assign
-    Object.assign(elm.style, value)
+    Object.assign(dom.style, value)
   } else if (attr === 'ref' && isFunction(value)) {
     // allow user refer element to their custom variable
-    // value: `(elm) => { someVar = elm }` alike
-    value(elm)
+    // value: `(dom) => { someVar = dom }` alike
+    value(dom)
   } else if (attr === 'key') {
-    ;(elm as any).__key__ = value
-    __ReactKeyedElmsPool.set(value, elm)
+    ;(dom as any).__key__ = value
+    __ReactKeyedElmsPool.set(value, dom)
   } else {
     // whatever it be, just set it
-    elm.setAttribute(attr, value)
+    dom.setAttribute(attr, value)
   }
 }
 
