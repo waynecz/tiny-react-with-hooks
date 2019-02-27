@@ -81,8 +81,8 @@ function _omitKeysIgnored(originKeys, ignoreKeys) {
 function _compareTwoValueToSeeIfTheyAreEquall(v1: any, v2: any): boolean {
   if (isObject(v1)) {
     if (!isObject(v2)) return false
-    // if not equal, return true
-    return isEqual(v1, v2)
+    // only compare their reference
+    return v1 === v2
   }
 
   if (isArray(v1)) {

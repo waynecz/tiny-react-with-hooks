@@ -77,14 +77,16 @@ export class Component {
   }
 
   public runActiveEffects() {
-    // walk effectCallbacks and
     this.activeEffectCallbacks.forEach(cursor => {
-      const effectHook = __ReactMemoizedEffects[cursor]
-      if (!isFunction(effectHook.callback)) return
+      const { callback, cleanup } = __ReactMemoizedEffects[cursor]
+      if (!isFunction(callback)) return
+      // try to cleanup last effect before run effecr callback
+      // 在执行回调前先试着清理之前的 effect
+      isFunction(cleanup) && cleanup!()
 
-      const cleanup = effectHook.callback(this.base)
+      const newCleanup = callback(this.base)
       if (cleanup) {
-        effectHook.cleanup = cleanup
+        __ReactMemoizedEffects[cursor].cleanup = newCleanup
       }
     })
   }
