@@ -104,6 +104,8 @@ export function patch(
         const newVnode = instance._render(instance.renderFunc)
 
         patch(dom, newVnode)
+
+        instance.runActiveEffects()
       }
     }
   } else if (typeof vnode !== 'object' && dom instanceof Text) {
