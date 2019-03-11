@@ -85,7 +85,7 @@ export class Component {
       isFunction(cleanup) && cleanup!()
 
       const newCleanup = callback(this.base)
-      if (cleanup) {
+      if (newCleanup) {
         __ReactMemoizedEffects[cursor].cleanup = newCleanup
       }
     })
